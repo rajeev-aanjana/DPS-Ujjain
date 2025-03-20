@@ -1,0 +1,287 @@
+/* Cards Section */
+#cards-container {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+    margin: 100px auto;
+    width: 100%;
+}
+
+.card {
+    height: 80%;
+    width: 24%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    object-fit: cover;
+}
+
+#card1 {
+    background-image: url('../../assets/academics.jpg');
+}
+
+#card2 {
+    background-image: url('../../assets/sports.jpg');
+}
+
+#card3 {
+    background-image: url('../../assets/cultural.webp');
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(24, 69, 24, 0.8);
+    padding: 30px;
+    padding-top: 160px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+
+.overlay h4 {
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.overlay p {
+    color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: rotate3d(-1, 1, 0, 20deg);
+}
+
+/* Green Admission Section */
+#green-div {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to left bottom, #119f3a, rgb(86, 123, 86));
+}
+
+#green-div h4 {
+    width: 65%;
+    line-height: 50px;
+    color: #fff;
+    text-align: center;
+    font-weight: 800;
+    font-size: 57px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.green-div-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btns {
+    margin-top: 30px;
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+}
+
+.btns button {
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: 0.5s;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.btns button:hover {
+    background-color: black;
+    color: #fff;
+    transition: 0.5s;
+}
+
+/* Pop-up Styling */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    z-index: 1001;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content h2 {
+    margin-bottom: 15px;
+}
+
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.popup-content label {
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    margin-top: 10px;
+}
+
+.popup-content input,
+.popup-content select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.popup-content button {
+    background-color: #119f3a;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.popup-content button:hover {
+    background-color: #0c7f2a;
+}
+
+.close-btn {
+    background-color: red !important;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.close-btn:hover {
+    background-color: darkred !important;
+}
+
+/* Responsive Styles */
+
+/* Tablet (Max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    #cards-container {
+        flex-wrap: wrap;
+        gap: 40px;
+        height: auto;
+        margin: 50px auto;
+        justify-content: center;
+    }
+
+    .card {
+        width: 45%;
+        height: 300px;
+    }
+
+    .btns {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .btns button {
+        width: 80%;
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile (Max-width: 768px) */
+@media screen and (max-width: 768px) {
+    #cards-container {
+        flex-direction: column;
+        height: auto;
+        gap: 30px;
+    }
+
+    .card {
+        width: 90%;
+        height: 250px;
+    }
+
+    #green-div {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #green-div h4 {
+        font-size: 28px;
+        line-height: 35px;
+        width: 100%;
+    }
+
+    .btns {
+        gap: 15px;
+    }
+
+    .btns button {
+        width: 90%;
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+/* Small Mobile (Max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%;
+        height: 220px;
+    }
+
+    .btns button {
+        font-size: 12px;
+        padding: 10px;
+    }
+}

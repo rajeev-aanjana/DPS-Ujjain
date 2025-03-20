@@ -1,0 +1,100 @@
+
+.campus{
+    margin: 80px auto;
+    width: 90%;
+    text-align: center;
+    height: auto;
+}
+.gallery{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.gallery img{
+    width: 23%;
+    border-radius: 10px;
+}
+
+.campus button{
+    cursor: pointer;
+  z-index: 10;
+  position: relative;
+    display: inline-flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: center;
+  transition: 0.5s;
+
+}
+
+.campus button:hover{
+    background-color: rgb(86, 123, 86);
+  transition: 0.5s;
+}
+
+.campus button img{
+    width: 25px;
+    margin-left: 10px;
+}
+
+/* Tablet (Max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .gallery {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+  }
+
+  .gallery img {
+      width: 48%;
+  }
+
+  .campus button {
+      font-size: 16px;
+      padding: 10px 20px;
+  }
+}
+
+/* Mobile (Max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .gallery {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .gallery img {
+      width: 80%;
+  }
+
+  .campus button {
+      font-size: 14px;
+      padding: 8px 18px;
+  }
+}
+
+/* Small Mobile (Max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .campus {
+      width: 95%;
+  }
+
+  .gallery {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .gallery img {
+      width: 100%;
+  }
+
+  .campus button {
+      font-size: 12px;
+      padding: 6px 15px;
+  }
+
+  .campus button img {
+      width: 20px;
+  }
+}

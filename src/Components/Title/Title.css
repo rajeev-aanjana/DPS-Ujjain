@@ -1,0 +1,27 @@
+.title{
+    background: #fff;
+    text-align: center;
+    color: #848484;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.title h3{
+    font-size: 45px;
+    color: #000;
+    font-weight: 600;
+    /* margin-top: 5px; */
+    text-transform: none;
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.title h2{
+    font-weight: 500;
+    font-size: 30px;
+    color: #000000a9;
+    /* max-width: 400px; */
+    margin-bottom: 5vh;
+}
